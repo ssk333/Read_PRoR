@@ -4,8 +4,12 @@
 
 scaffoldでカンタンなTODOアプリの開発をしています．
 
- ![hoge](https://github.com/ssk333/Read_PRoR/blob/branch_a/todo/picture/start.png　"Welcome画面")
- ![hoge]( "Task登録画面")
- ![hoge]( "created画面")
- ![hoge]( "Task登録後の一覧画面")
- ![hoge](/Users/kenta/virtualbox/centos7/Read_PRoR/todo/picture/routes.png "ルーティング情報")
+ ![Welcome画面](https://github.com/ssk333/Read_PRoR/wiki/picture/start.png　"Welcome画面")
+
+ ![Task登録画面](https://github.com/ssk333/Read_PRoR/wiki/picture/task_new.png "Task登録画面")
+
+ ![created画面](https://github.com/ssk333/Read_PRoR/wiki/picture/created.png "created画面")
+
+ ![Task登録後の一覧画面](https://github.com/ssk333/Read_PRoR/wiki/picture/show.png "Task登録後の一覧画面")
+ 
+ ![ルーティング情報](/Users/kenta/virtualbox/centos7/Read_PRoR/todo/picture/routes.png "ルーティング情報")
