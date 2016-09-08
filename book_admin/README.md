@@ -3,3 +3,14 @@
 ActiveRecordでモデルを実装する
 
 書籍管理アプリ
+
+***
+**ルーティングとリソース**
+
+リソース前
+
+![リソース前](https://github.com/ssk333/Read_PRoR/wiki/picture/pre.png "リソース前")
+
+リソース後
+
+![リソース後](https://github.com/ssk333/Read_PRoR/wiki/picture/resource.png "リソース後")
