@@ -13,7 +13,7 @@ class BooksController < ApplicationController
     #   format.csv
     #   format.json
     # end
-    render :show
+    # render :show
   end
 
 #   private
