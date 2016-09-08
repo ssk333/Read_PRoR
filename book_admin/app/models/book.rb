@@ -16,4 +16,13 @@ class Book < ApplicationRecord
       book.errors[:name] << "I don't like exercise."
     end
   end
+
+  before_validation do |book|
+    book.name = self.name.gsub(/Cat/) do |matched|
+      "lovely #{matched}"
+    end
+  end  
+  after_destroy do |book|
+    Rails.logger.info "Book is deleted: #{book.attributes.inspect}"
+  end
 end
