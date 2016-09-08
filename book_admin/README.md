@@ -14,3 +14,7 @@ ActiveRecordでモデルを実装する
 リソース後
 
 ![リソース後](https://github.com/ssk333/Read_PRoR/wiki/picture/resource.png "リソース後")
+
+resourcesの拡張
+
+![拡張](https://github.com/ssk333/Read_PRoR/wiki/picture/expand.png "拡張")
