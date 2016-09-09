@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'active_decorator'
+# gem 'better_errors',group:[:development, :test]
+# gem 'binding_of_caller',group:[:development, :test]
+
 gem 'hirb'
 gem 'pry-rails'
 gem 'pry-doc'
