@@ -1,0 +1,2 @@
+module StudentDecorator
+end
