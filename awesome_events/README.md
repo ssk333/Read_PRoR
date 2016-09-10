@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**実装する主な仕様**
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ユーザは作成されたイベント情報を閲覧することができる
+  * デフォルトでは，開始時間が現在時刻以降のイベントが開始時間の昇順で表示される
+  * 10件毎にページネーションする
+  * イベント名および開始時間でイベントを検索し絞り込むことができる
+* ユーザはtwitterアカウントでログインできる
+* ログインしたユーザはイベントを作成できる
+  * イベントの情報として，イベントの作成者，イベントの名前(最大50文字)，イベントの画像，開催場所(最大100文字)，開始時間，終了時間，イベント詳細(最大2000文字)，参加者一蘭があり，すべてのユーザが閲覧することができる
+* ユーザは自分が作成したイベントであれば削除することができる
+* ログインしたユーザは作成されたイベントに参加できる
+  * イベントに参加するときに，短いコメント(30文字)をつけることができる
+  * ログインしたユーザはイベントの参加をキャンセルすることができる
+* ログインしたユーザは退会することができる
+  * ただし，関連する未開催のイベントが存在しない時に限る
+  * 退会したユーザの情報は削除される
+  * イベントを作成したユーザが退会している場合，作成したユーザの情報として「退会したユーザです」と表示される
+  * イベントに参加したユーザが退会している場合，参加したユーザの情報として「退会したユーザです」と表示される
