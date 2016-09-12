@@ -1,0 +1,21 @@
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.4/ext/websocket-driver
+/home/vagrant/.rbenv/versions/2.3.0/bin/ruby -r ./siteconf20160912-852-1nvakpd.rb extconf.rb
+creating Makefile
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR=" clean
+make: Warning: File `Makefile' has modification time 16 s in the future
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR="
+make: Warning: File `Makefile' has modification time 16 s in the future
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR=" install
+make: Warning: File `Makefile' has modification time 16 s in the future
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20160912-852-12bx29z
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.

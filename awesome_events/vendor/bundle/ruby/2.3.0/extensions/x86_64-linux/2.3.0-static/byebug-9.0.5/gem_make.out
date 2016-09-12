@@ -1,0 +1,25 @@
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+/home/vagrant/.rbenv/versions/2.3.0/bin/ruby -r ./siteconf20160912-852-1aw37ae.rb extconf.rb
+creating Makefile
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR=" clean
+make: Warning: File `Makefile' has modification time 16 s in the future
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR="
+make: Warning: File `Makefile' has modification time 16 s in the future
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR=" install
+make: Warning: File `Makefile' has modification time 14 s in the future
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20160912-852-1oaeg9p/byebug
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.

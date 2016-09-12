@@ -1,0 +1,21 @@
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+/home/vagrant/.rbenv/versions/2.3.0/bin/ruby -r ./siteconf20160912-852-1brju9s.rb extconf.rb
+creating Makefile
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+make: Warning: File `Makefile' has modification time 16 s in the future
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+make: Warning: File `Makefile' has modification time 16 s in the future
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+current directory: /rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+make: Warning: File `Makefile' has modification time 16 s in the future
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20160912-852-lt2q37
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.

@@ -1,0 +1,198 @@
+have_header: checking for unistd.h... -------------------- yes
+
+"gcc -o conftest -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L/home/vagrant/.rbenv/versions/2.3.0/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -E -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <unistd.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region()... -------------------- no
+
+"gcc -o conftest -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L/home/vagrant/.rbenv/versions/2.3.0/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: 関数 ‘t’ 内:
+conftest.c:13:57: エラー: ‘rb_thread_blocking_region’ が宣言されていません (この関数内での最初の使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+                                                         ^
+conftest.c:13:57: 備考: 未宣言の識別子は出現した各関数内で一回のみ報告されます
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+/* end */
+
+"gcc -o conftest -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L/home/vagrant/.rbenv/versions/2.3.0/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/ccJxrtJL.o: 関数 `t' 内:
+/rails_projects/Read_PRoR/awesome_events/vendor/bundle/ruby/2.3.0/gems/nio4r-1.2.1/ext/nio4r/conftest.c:14: `rb_thread_blocking_region' に対する定義されていない参照です
+collect2: エラー: ld はステータス 1 で終了しました
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_thread_blocking_region();
+14: int t(void) { rb_thread_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_call_without_gvl()... -------------------- yes
+
+"gcc -o conftest -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L/home/vagrant/.rbenv/versions/2.3.0/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: 関数 ‘t’ 内:
+conftest.c:13:57: エラー: ‘rb_thread_call_without_gvl’ が宣言されていません (この関数内での最初の使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return !p; }
+                                                         ^
+conftest.c:13:57: 備考: 未宣言の識別子は出現した各関数内で一回のみ報告されます
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return !p; }
+/* end */
+
+"gcc -o conftest -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat conftest.c  -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L. -L/home/vagrant/.rbenv/versions/2.3.0/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/vagrant/.rbenv/versions/2.3.0/lib -L/home/vagrant/.rbenv/versions/2.3.0/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_thread_call_without_gvl();
+14: int t(void) { rb_thread_call_without_gvl(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for sys/select.h... -------------------- yes
+
+"gcc -E -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/select.h>
+/* end */
+
+--------------------
+
+have_header: checking for poll.h... -------------------- yes
+
+"gcc -E -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <poll.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/epoll.h... -------------------- yes
+
+"gcc -E -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/epoll.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/event.h... -------------------- no
+
+"gcc -E -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  conftest.c -o conftest.i"
+conftest.c:3:23: 致命的エラー: sys/event.h: そのようなファイルやディレクトリはありません
+ #include <sys/event.h>
+                       ^
+コンパイルを停止しました。
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/event.h>
+/* end */
+
+--------------------
+
+have_header: checking for port.h... -------------------- no
+
+"gcc -E -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  conftest.c -o conftest.i"
+conftest.c:3:18: 致命的エラー: port.h: そのようなファイルやディレクトリはありません
+ #include <port.h>
+                  ^
+コンパイルを停止しました。
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <port.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/resource.h... -------------------- yes
+
+"gcc -E -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/x86_64-linux -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0/ruby/backward -I/home/vagrant/.rbenv/versions/2.3.0/include/ruby-2.3.0 -I. -I/home/vagrant/.rbenv/versions/2.3.0/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/resource.h>
+/* end */
+
+--------------------
+
