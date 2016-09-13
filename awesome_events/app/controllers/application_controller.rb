@@ -10,12 +10,12 @@ class ApplicationController < ActionController::Base
     @current_user ||=User.find(session[:user_id])
   end
 
-  def authenticate
-    return　if logged_in?
-    redirect_to root_path,alert:'ログインしてください'
-  end
-
   def logged_in?
     !!session[:user_id]
+  end
+
+  def authenticate
+    return　if logged_in?
+    redirect_to root_path, alert: 'ログインしてください'
   end 
 end
