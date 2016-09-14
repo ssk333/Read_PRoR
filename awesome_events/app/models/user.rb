@@ -1,5 +1,6 @@
-class User < ApplicationRecord::Base
-  has_many :created_events,class_name: 'Event',foreign_key: :owner_id
+class User < ActiveRecord::Base
+  has_many :created_events, class_name: 'Event', foreign_key: :owner_id
+  
   def self.find_or_create_from_auth_hash(auth_hash)
     provider = auth_hash[:provider]
     uid = auth_hash[:uid]

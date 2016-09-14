@@ -4,11 +4,12 @@
 <div class="list-group">
   <% @events.each do |event| %>
     <%= link_to(event,class:'list-group-item') do %>
-    <h4 class="list-group-item-heading">
-      <%= event.name %>
-    </h4>
-    <p class="list-group-item-text">
-      <%= event.start_time.strftime('%Y/%m/%d %H:%M') %> - <%= event.end_time.strftime('%Y/%m/%d %H:%M') %>
-    </p>
+      <h4 class="list-group-item-heading">
+        <%= event.name %>
+      </h4>
+      <p class="list-group-item-text">
+        <%= event.start_time.strftime('%Y/%m/%d %H:%M') %> - <%= event.end_time.strftime('%Y/%m/%d %H:%M') %>
+      </p>
+    <% end %>
   <% end %>
 </div>
