@@ -1,8 +1,9 @@
 class EventsController < ApplicationController
-  before_action :authenticate
+  before_action :authenticate,except: :show
 
   def show
     @event = Event.find(params[:id])
+    @tickets = @event.tickets.includes(:user).order(:created_at)
   end
 
   def new

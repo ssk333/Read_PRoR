@@ -8,7 +8,7 @@ class TicketsController < ApplicationController
   def create
     ticket = current_user.tickets.build do |t|
       t.event_id = params[:event_id]
-      t.commet = params[:ticlet][:comment]
+      t.comment = params[:ticlet][:comment]
     end
     if ticket.save
       flash[:notice] = 'このイベントに参加表明しました'
