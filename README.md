@@ -59,7 +59,10 @@
 
         動作はさせず，読むだけ読みました．読みながら，付箋などで目印を付けたのでリファレンスとして利用できればいいです．
 
-        #落穂ひろい #gemで拡張 #ページネーション #検索機能 #画像添付 #テストコード #minitest #RSpec #エンドツーエンド #TDD #CI(継続的インテグレーション)　#カバレッジ #DevOps #Vagrant #Chef #デプロイ #Capistrano #New Relic #ドメインモデル #ActiveRecordパターン #ActiveModel #値オブジェクト #Concern #サービスクラス #Rack #Rack Middleware #Railtie #プラグイン
+        #落穂ひろい #gemで拡張 #ページネーション #検索機能 #画像添付 #テストコード #minitest #RSpec
+        #エンドツーエンド #TDD #CI(継続的インテグレーション)　#カバレッジ #DevOps #Vagrant #Chef
+        #デプロイ #Capistrano #New Relic #ドメインモデル #ActiveRecordパターン #ActiveModel
+        #値オブジェクト #Concern #サービスクラス #Rack #Rack Middleware #Railtie #プラグイン
 
 ***
 
